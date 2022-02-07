@@ -1,0 +1,538 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --bgcolor: #080C20;
+  --primarycolor: #093F68;
+  --secondarycolor: #3EE9E5;
+  --whitecolor: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+  background: var(--bgcolor);
+}
+
+/* Global Classes */
+.container {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+.d_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.paragraph {
+  margin: 0;
+  font-weight: 500;
+  line-height: 25px;
+  font-size: 15px;
+}
+
+.darktext {
+  color: #777F98;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.center {
+  margin: 0 auto;
+  display: block;
+}
+
+.section_bottom_space {
+  margin-bottom: 202px;
+}
+
+.section_tittle {
+  color: var(--whitecolor);
+  font-weight: 800;
+  font-size: 32px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* Other Styles */
+header {
+  margin-top: 81px;
+  background: url("../images/illustration-hero-left.svg"), url("../images/bg-hero-squiggle.svg"), url("../images/illustration-hero-right.svg");
+  background-position: bottom left -53px, center center,bottom right -53px;
+  background-repeat: no-repeat no-repeat;
+  height: 610px;
+}
+
+header .banner{
+  width: 540px;
+  margin: 0 auto;
+}
+
+header .banner .banner_tittle {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 56px;
+  color: #fff;
+  margin: 185px 0px 24px 0px;
+}
+
+header .banner .banner_tittle span {
+  color: var(--secondarycolor);
+}
+
+header .banner .scroll_icon {
+  animation: scroll 1s alternate-reverse infinite;
+}
+
+/* Animation */
+@-webkit-keyframes scroll {
+  0% {
+    margin-top: 50px;
+  }
+  100% {
+    margin-top: 64px;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    margin-top: 50px;
+  }
+  100% {
+    margin-top: 64px;
+  }
+}
+
+main .card_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+main .card_wrapper .card {
+  width: 255px;
+  min-height: 335px;
+}
+
+main .card_wrapper .card:nth-child(even) {
+  margin-top: 48px;
+}
+
+main .card_wrapper .card .img img {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+main .card_wrapper .card:hover .img img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.card_wrapper .card .img {
+  width: 160px;
+  height: 164px;
+  background: var(--primarycolor);
+  border-radius: 45px;
+}
+
+.card_wrapper .card h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--whitecolor);
+  margin: 48px 0px 23px 0px;
+}
+
+.section-title-and-desc {
+  width: 570px;
+}
+
+.margin__b24 {
+  margin-bottom: 24px;
+}
+
+.pricing {
+  margin-bottom: 151px;
+}
+
+.pricing .price_cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.price_cards .price_card {
+  width: 445px;
+  height: 418px;
+  margin: 94px 0px 0px 0px;
+  background: var(--primarycolor);
+  padding: 48px 38px;
+  position: relative;
+  color: var(--whitecolor);
+  border-radius: 10px;
+}
+
+.price_cards .price_card.active {
+  background: var(--secondarycolor);
+  height: 445px;
+  color: #000;
+}
+
+.price_cards .price_card .card_icon {
+  position: absolute;
+  top: -30px;
+  left: 38px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.price_cards .price_card:hover .card_icon {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.price_cards .price_card h3 {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.price_cards .price_card p {
+  color: #9CB2C2;
+  margin: 19px 0px 24px 0px;
+}
+
+.price_cards .price_card.active p {
+  color: #1E646F;
+}
+
+.price_cards .price_card h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.price_cards .price_card.active h1 small {
+  font-size: 15px;
+  color: #1E646F;
+  margin-left: 10px;
+}
+
+.price_cards .price_card span {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.price_cards .price_card span img {
+  margin-right: 15px;
+}
+
+footer {
+  padding-top: 56px;
+  min-height: 280px;
+  background: url("../images/bg-footer-squiggle.svg");
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+footer form {
+  width: 496px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+footer form input {
+  background: #093F68;
+  width: 320px;
+  padding: 12px 18px;
+  border-radius: 25px;
+  outline: none;
+  border: 2px solid  transparent;
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--whitecolor);
+  height: 48px;
+}
+
+footer form input:focus {
+  border: 2px solid var(--secondarycolor);
+}
+
+footer form input::-webkit-input-placeholder {
+  color: #6B8CA4;
+}
+
+footer form input:-ms-input-placeholder {
+  color: #6B8CA4;
+}
+
+footer form input::-ms-input-placeholder {
+  color: #6B8CA4;
+}
+
+footer form input::placeholder {
+  color: #6B8CA4;
+}
+
+footer form button {
+  background-color: var(--secondarycolor);
+  color: var(--primarycolor);
+  height: 48px;
+  padding: 0px 25px;
+  border-radius: 35px;
+  font-size: 15px;
+  font-weight: 800;
+  outline: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+footer form button:hover {
+  color: var(--whitecolor);
+  background: transparent;
+  border-color: var(--secondarycolor);
+}
+
+footer .input_group p {
+  color: red;
+  font-size: 12px;
+  font-weight: 400;
+  padding-left: 18px;
+}
+
+footer .error {
+  display: none;
+}
+
+/* Media queries */
+
+
+/* For Large sceeens */
+@media (min-width: 1500px) {
+  header {
+    background-position: center left, center center, center right;
+    height: 500px;
+    width: 1440px;
+    margin: 81px auto 0px auto;
+  }
+  
+}
+
+/* For Small screens */
+@media (max-width: 1130px) {
+  .container {
+    width: 573px;
+  }
+  main .card_wrapper {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .price_cards .price_card {
+    height: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  main .card_wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 573px;
+  }
+  main .card_wrapper .card {
+    width: 100%;
+    min-height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    margin-bottom: 40px;
+    padding-left: 58px;
+  }
+  main .card_wrapper .card:nth-child(even) {
+    margin: 0px 0px 40px 0px;
+    padding-left: 0;
+  }
+  .card_wrapper .card .desc {
+    padding-left: 55px;
+    width: 340px;
+  }
+  .card_wrapper .card .img {
+    width: 120px;
+    height: 123px;
+  }
+  .card_wrapper .card .img img {
+    width: 50%;
+  }
+  .card_wrapper .card h3 {
+    margin-top: 0;
+  }
+  header {
+    background: url("../images/illustration-hero-left.svg"), 
+                url("../images/tablet-banner-line.png"),
+                url("../images/illustration-hero-right.svg");
+    background-repeat: no-repeat;
+    background-size: auto, 297px auto;
+    height: 517px;
+    margin-top: 48px;
+    background-position: bottom left -221px, center center,bottom right -221px;
+  }
+  header .banner{
+    width: 457px;
+  }
+  header .banner .banner_tittle {
+    line-height: 40px;
+    font-size: 32px;
+    margin-top: 128px;
+  }
+  .break {
+    display: block;
+  }
+  .section_bottom_space {
+    margin-bottom: 109px;
+  }
+  .section_tittle {
+    font-size: 24px;
+  }
+  .pricing .price_cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .price_cards .price_card {
+    width: 445px;
+  }
+  footer {
+    min-height: 245px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 0px 24px;
+  }
+  header .banner{
+    width: 100%;
+  }
+  main .card_wrapper {
+    width: 100%;
+  }
+  main .card_wrapper .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+  }
+  .card_wrapper .card h3 {
+    margin: 32px 0px 11px 0px;
+  }
+  main .card_wrapper .card:nth-child(even) {
+    margin-left: 0;
+  }
+  .section-title-and-desc {
+    width: 100%;
+  }
+  footer form {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .price_cards .price_card {
+    width: 100%;
+  }
+  header {
+    min-height: 800px;
+    margin-top: 40px;
+    background-image: url("../images/banner-illustration-mobile.png");
+    background-position: top 65px  center;
+  }
+  header .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  header .banner .banner_tittle {
+    margin-top: 346px;
+  }
+  .break {
+    display: inline;
+  }
+  .card_wrapper .card .desc {
+    padding-left: 0;
+  }
+  footer {
+    background-size: 383px;
+    padding-top: 9px;
+  }
+  .input_group,
+  footer form input {
+    width: 100%;
+  }
+  footer form button {
+    width: 100%;
+    margin-top: 24px;
+  }
+}
